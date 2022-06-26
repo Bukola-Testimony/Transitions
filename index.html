@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+
+    <style>
+
+      body{
+        margin: 0 auto;
+        padding:0;
+        background-color: #DFDBE5;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      h1{
+        font-size: 3em;
+        margin: 20px 20px;
+      }
+
+      .circle p{
+        font-size: 2em;
+        margin:0 50px;
+      }
+
+      
+      /* transition and hover */
+      .circle {
+        margin: 0 30px;
+        width: 350px;
+        height: 350px;
+        background: magenta;
+        transition: 3s;
+      }
+
+      .circle:hover {
+        background-color: cyan;
+        border-radius: 50%;
+      }
+
+      /* Transition with duration and otherproperties */
+
+      .cubes div {
+        width: 100px;
+        height: 100px;
+        background: turquoise;
+        margin: 20px 20px;
+       margin-left: 20px;
+        transition: margin-left 3s;
+        /* display: inline-block; */
+      }
+
+      /* Note the selector. It behaves differently when not placed correctly */
+
+      .cubes:hover div {
+        margin-left: 500px;
+        background: yellow;
+      }
+
+      /* transition with timing functions for each div  Note: transition separately*/
+
+      .cubes #one {
+        transition-timing-function: ease-in;
+      }
+      .cubes #two {
+        transition-timing-function: ease-out;
+      }
+      .cubes #three {
+        transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      }
+      .cubes #four {
+        transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- for transitions -->
+    <marquee><h1>Transitions</h1></marquee>
+
+       <div class="circle"><p> I am Beautiful!!</p></div>
+
+    <section class="cubes">
+      <div id="one">THIS</div>
+      <div id="two">IS</div>
+      <div id="three">SUPER</div>
+      <div id="four">AWESOME!</div>
+    </section>
+      
+   
+  </body>
+</html>
